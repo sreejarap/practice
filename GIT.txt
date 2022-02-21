@@ -1,0 +1,157 @@
+
+--> GIT created by Linus torvalds in 2005
+
+-->why Git?
+It serves as an imp distributed version control devops tool. 
+
+-->why Git came into existence?
+
+-->what is Git?
+Git is a free open source distributed control system.
+
+-->Features of Git?
+Very scalable(Can easily handle changes, converts large data into small by compressing it using lossless compression technique)
+reliable(lost data can be retreived)
+secure
+
+-->How Git plays a vital role in Devops?
+
+plan-->code-->shared repository-->continuous integration-->build-->test-->
+configuration management-->deploy-->monitor-->plan......
+
+-->How Microsoft and other companies are using Git?
+
+-->VCS
+VS: Version Control system
+Types:
+
+1.Centralised VCS - all people connected to single server(Repository) 
+and need to connected to the network to perform actions. 
+IF anything happens, may loose entire project as it is centralised(one server)
+
+                       update  
+                 <-------------->working copy
+                 |     commit
+                 |
+                 |     update
+Repository(server)<------------->working copy
+                 |     commit
+                 |
+                 |     update
+                 <-------------->working copy
+                       commit
+
+
+2.Distributed VCS - 
+
+Every programmer has their own repository so that they can update at anytime.
+Adtgs:
+>all operations are easy fast except push and pull because we only need to access the hard drive so there 
+is no need of internet connection.
+>if the central server get crashed, lost data can be retrived is by anyone from local servers.
+>push - to central server on completion
+>pull - from central server to update
+>Can push all the work all at once to central server
+
+
+
+                         push                                      update  
+                  <------------------>Repository(local server)<-------------->working copy
+                  |      pull                                      commit
+                  |
+                  |      push                                      update
+Repository(server)<------------------>Repository(local server)<-------------->working copy
+                  |      pull                                      commit
+                  |
+                  |      push                                       update
+                  <------------------->Repository(local server)<-------------->working copy
+                         pull                                       commit
+
+
+GIT commands:-
+
+-->Initialise 
+-->Add
+-->Commit
+-->Pull
+-->Push
+
+Steps:
+git init
+saved a html file
+git status
+git add file
+make changes
+git status
+git diff
+git commit -a -m "Initialcommit"
+
+--> "-a" refers to all and "-m" refers to message
+
+git config --global user.name "sreeja"
+git config --global uset.email "17h61a04b0@cvsr.ac.in"
+git commit -a -m "second level commit"
+--> shows.... nothing to commit, working tree clean ---- means already it is commited and file has sent to repository from staging area.
+
+
+BRANCHES:
+Branches are pointers to a specific commit.
+git prefers to keep its branches as lightweight as possible.
+
+Types:
+1. Local branch - another part of your working tree
+2. Remote branch - Have special purposes like they link your work on local repo to centralised repo. 
+
+
+git branch
+git branch testing
+git branch production
+git checkout testing
+git checkout -b main
+git branch -D testing(-D for half merged branches)
+git branch -d features(-d to delete a branch)
+git merge production
+git merge --abort
+git remote add origin url(give url)
+git push origin branch name
+(will ask authentication)
+git remote -v
+git fetch origin(copy changes from remote to local repository)
+git pull origin branchname
+
+
+
+-------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------
+TRANSCRIPTS:
+
+
+So if in future the number of collaborators increases, now you can see three collaborators now, tomorrow, if it increased 200 collaborators or thousand collaborators.
+It can easily handle this changes though. Get represent an entire repository. That data stored on the client side is very small.
+As GIT.
+Compresses all the huge data through a lossless compression technique.
+Reliable, since every contributor has its own local copy on the events of a system crash, the last data can be recovered from any one of the local repository. You'll have always have a backup of all your files.
+Secure.
+Get users to SHE one what is SH A1 secure hash function to name and identify objects within its repository?
+Every file and commit is check some and retrieve by its checksum at the time of. Check out the Git history is stored in such a way that the idea of a particular version or a git or a commit in git terms, depends upon the complete development history leading up to that commit. Once it is pushed, it is not possible to change the old version without it being noticed.
+Understood.
+So that's where had given their transcription files economical in case of serious CV.
+See. Yes. What does CVC is that is centralized version control system. The central server needs to be powerful enough to serve request of the entire team. For smaller team it is not an issue, but as the team size grows, the hardware limitations of the server can be a performance bottleneck.
+In case of DVC, is what is DVC is distributed version control system developers don't interact with the service unless they need to push or pull changes. All the heavy lifting happens on the client side, so the server hardware can be very simple indeed.
+
+
+ git is an integral part of Dev OPS. They've also means development plus operation plus QA team. Dev OPS is the practice of bringing agility to the process of development and operations. It's an entirely new ideology, the word that has swept IT organizations worldwide.
+OK, boosting project lifecycle and in turn increasing profits. Dev OPS promotes communication between development engineers and operations participating together in the entire service lifecycle from design, so the development process two production support.
+You'll have something called isn't continuous.
+
+Integration.
+Have you heard this term then from continuous integration you will try to build from this build. You'll try to test once test you'll try to have configuration.
+Management from configuration management then again.
+He will try to. You'll deploy the code.
+Then once you deploy the code title be monitored.
+Then again, the changes, but again it will start from plan. If I'm writing plan means again this process it is like a continuous process OK as per this diagram that is from plan code, shared repository, continuous integration, build test, configuration management, deploy monitor again it will start from plan.
+OK, the diagram shows the entire life cycle of DevOps starting from planning the project to its diploid to its deployment and monitoring, git plays a vital role when it comes to managing the code that the collaborators contribute to the shared repository.
+This code is then extracted for performing continuous integration to create a build and test it on the test server, eventually deploy it on the production tools like Git.
+Looks like GIT enable communication between the development and the operation team. When you're developing a large project with huge number of collaborators, it's very important to have communication between the collaborators while making changes in the project. Commit messages in Git plays a very vital important role in communicating among the team.
+The bits and pieces that will all deploy a lies in the version control system, like get to succeed.
+In Dev OPS you need to have all of the communication in. We see that is version control. Hence get plays a vital role in succeeding at Dev OPS.
